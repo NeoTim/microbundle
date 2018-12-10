@@ -258,6 +258,7 @@ function createBabelConfig(options) {
 			],
 		],
 		plugins: [
+			require.resolve('babel-plugin-macros'),
 			[
 				require.resolve('babel-plugin-transform-async-to-promises'),
 				{ inlineHelpers: true, externalHelpers: true },
