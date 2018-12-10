@@ -395,6 +395,7 @@ function createConfig(options, entry, format, writeMeta) {
 								require.resolve('@babel/plugin-proposal-class-properties'),
 								{ loose: true },
 							],
+							require.resolve('babel-plugin-macros'),
 						],
 					}),
 					{
