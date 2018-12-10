@@ -369,6 +369,7 @@ function createConfig(options, entry, format, writeMeta) {
 						babelrc: false,
 						exclude: 'node_modules/**',
 						plugins: [
+							require.resolve('babel-plugin-macros'),
 							require.resolve('@babel/plugin-syntax-jsx'),
 							[
 								require.resolve('babel-plugin-transform-async-to-promises'),
@@ -378,7 +379,6 @@ function createConfig(options, entry, format, writeMeta) {
 								require.resolve('@babel/plugin-proposal-class-properties'),
 								{ loose: true },
 							],
-							require.resolve('babel-plugin-macros'),
 						],
 					}),
 					{
