@@ -388,7 +388,7 @@ function createConfig(options, entry, format, writeMeta) {
 						browser: options.target !== 'node',
 					}),
 					commonjs({
-						include: 'node_modules/**',
+						include: '../../**/node_modules/**',
 					}),
 					json(),
 					useTypescript &&
