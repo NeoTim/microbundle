@@ -836,6 +836,58 @@ exports[`fixtures jsx 6`] = `
 
 exports[`fixtures jsx 7`] = `"{\\"version\\":3,\\"file\\":\\"jsx.umd.js\\",\\"sources\\":[\\"../index.js\\"],\\"sourcesContent\\":[\\"const h = (tag, props, ...children) => ({ tag, props, children });\\\\n\\\\nexport default class Foo {\\\\n\\\\trender() {\\\\n\\\\t\\\\treturn (\\\\n\\\\t\\\\t\\\\t<div id=\\\\\\"app\\\\\\">\\\\n\\\\t\\\\t\\\\t\\\\t<h1>Hello, World!</h1>\\\\n\\\\t\\\\t\\\\t\\\\t<p>A JSX demo.</p>\\\\n\\\\t\\\\t\\\\t</div>\\\\n\\\\t\\\\t);\\\\n\\\\t}\\\\n}\\\\n\\"],\\"names\\":[\\"const\\",\\"h\\",\\"tag\\",\\"props\\",\\"children\\",\\"Foo\\",\\"render\\",\\"id\\"],\\"mappings\\":\\"kKAAAA,IAAMC,WAAKC,EAAKC,4EAA0BD,QAAKC,WAAOC,IAEjCC,kCACpBC,yBAEEL,SAAKM,GAAG,OACPN,YAAI,iBACJA,WAAG\\"}"`;
 
+exports[`fixtures macro 1`] = `
+"Used script: microbundle
+
+Directory tree:
+
+macro
+  dist
+    macro-lib.js
+    macro-lib.js.map
+    macro-lib.mjs
+    macro-lib.mjs.map
+    macro-lib.umd.js
+    macro-lib.umd.js.map
+  package.json
+  src
+    index.js
+    macro.js
+
+
+Build \\"macroLib\\" to dist:
+49 B: macro-lib.js.gz
+33 B: macro-lib.js.br
+48 B: macro-lib.mjs.gz
+32 B: macro-lib.mjs.br
+149 B: macro-lib.umd.js.gz
+117 B: macro-lib.umd.js.br"
+`;
+
+exports[`fixtures macro 2`] = `
+"module.exports=\\"name-macro\\";
+//# sourceMappingURL=macro-lib.js.map
+"
+`;
+
+exports[`fixtures macro 3`] = `"{\\"version\\":3,\\"file\\":\\"macro-lib.js\\",\\"sources\\":[],\\"sourcesContent\\":[],\\"names\\":[],\\"mappings\\":\\"\\"}"`;
+
+exports[`fixtures macro 4`] = `
+"export default\\"name-macro\\";
+//# sourceMappingURL=macro-lib.mjs.map
+"
+`;
+
+exports[`fixtures macro 5`] = `"{\\"version\\":3,\\"file\\":\\"macro-lib.mjs\\",\\"sources\\":[],\\"sourcesContent\\":[],\\"names\\":[],\\"mappings\\":\\"\\"}"`;
+
+exports[`fixtures macro 6`] = `
+"!function(e,n){\\"object\\"==typeof exports&&\\"undefined\\"!=typeof module?module.exports=n():\\"function\\"==typeof define&&define.amd?define(n):e.macroLib=n()}(this,function(){return\\"name-macro\\"});
+//# sourceMappingURL=macro-lib.umd.js.map
+"
+`;
+
+exports[`fixtures macro 7`] = `"{\\"version\\":3,\\"file\\":\\"macro-lib.umd.js\\",\\"sources\\":[],\\"sourcesContent\\":[],\\"names\\":[],\\"mappings\\":\\"\\"}"`;
+
 exports[`fixtures name-custom-amd 1`] = `
 "Used script: microbundle
 
