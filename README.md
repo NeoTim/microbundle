@@ -12,7 +12,7 @@
 ## ✨ Features:
 
 - **One dependency** to bundle your library using only a `package.json`
-- Support for ESnext & async/await _(via [Bublé] & [Nodent])_
+- Support for ESnext & async/await _(via [Bublé] & [async-to-promises])_
 - Produces tiny, optimized code for all inputs
 - Supports multiple entry modules _(`cli.js` + `index.js`, etc)_
 - Creates multiple output formats for each entry _(<abbr title="CommonJS (node)">CJS</abbr>, <abbr title="Universal Module Definition">UMD</abbr> & <abbr title="ECMAScript Modules">ESM</abbr>)_
@@ -89,6 +89,18 @@ You can specify output builds in a `package.json` as follows:
 "source": "src/foo.js",         // custom entry module (same as 1st arg to microbundle)
 ```
 
+### Mangling Properties
+
+Libraries often wish to rename internal object properties or class members to smaller names - transforming `this._internalIdValue` to `this._i`. Microbundle doesn't currently do this by default, but it can be enabled by adding a "mangle" property to your package.json, with a pattern to control when properties should be mangled. To mangle all property names beginning an underscore, add the following:
+
+```json
+{
+  "mangle": {
+    "regex": "^_"
+  }
+}
+```
+
 ## 🛣 Roadmap
 
 Here's what's coming up for Microbundle:
@@ -104,6 +116,8 @@ Here's what's coming up for Microbundle:
 - [react-recomponent](https://github.com/philipp-spiess/react-recomponent) Reason-style reducer components for React using ES6 classes.
 - [brazilian-utils](https://github.com/brazilian-utils/brazilian-utils) Utils library for specific Brazilian businesses.
 - [react-hooks-lib](https://github.com/beizhedenglong/react-hooks-lib) A set of reusable react hooks.
+- [mdx-deck-live-code](https://github.com/JReinhold/mdx-deck-live-code) A library for [mdx-deck](https://github.com/jxnblk/mdx-deck) to do live React and JS coding directly in slides.
+- [react-router-ext](https://github.com/ri7nz/react-router-ext) An Extended [react-router-dom](https://github.com/ReactTraining/react-router/tree/master/packages/react-router-dom) with simple usage.
 
 ## 🥂 License
 
@@ -111,3 +125,4 @@ Here's what's coming up for Microbundle:
 
 [rollup]: https://github.com/rollup/rollup
 [bublé]: https://github.com/Rich-Harris/buble
+[async-to-promises]: https://github.com/rpetrich/babel-plugin-transform-async-to-promises
